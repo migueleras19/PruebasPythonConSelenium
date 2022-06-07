@@ -1,4 +1,4 @@
 sub,trans,plan,teje,refe
-04,7247,"C:\Users\eras_\Downloads\047247.xls",NORMAL,
-04,6003,"C:\Users\eras_\Downloads\046003.xls",GRUPOS,GRUPO,
-04,6004,"C:\Users\eras_\Downloads\046004.xls",GRUPOS,GRUPO,
+04,6003,"/home/qacore/Escritorio/CamaraCorrientes/templates/046003-PAGO_CHEQUES_CAMARA.xls",GRUPOS,GRUPO
+04,6004,"/home/qacore/Escritorio/CamaraCorrientes/templates/046004-LOTE-CAMARA-ENTRANTE.xls",GRUPOS,GRUPO
+
