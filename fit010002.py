@@ -5,15 +5,15 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-class Ingreso01002(unittest. TestCase):
-    
-    
+class Testingreso01002(unittest. TestCase):
+
+
     def setUp(self):
          self.driver = webdriver.Chrome(executable_path=r"/media/qacore/data/drivers/chromedriver")
     def testSubirformularios(self):
          driver = self.driver
          driver.maximize_window()
-         driver.get("http://10.16.5.94:8380/WEB3/ingreso.html")
+         driver.get("http://10.16.5.88:9380/WEB3/ingreso.html")
          usuario = driver.find_element_by_id("usuario")
          usuario.send_keys("ue01000663")
          clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
@@ -24,35 +24,35 @@ class Ingreso01002(unittest. TestCase):
          trans.send_keys("01002")
          trans.send_keys("webdrive" + Keys.ENTER)
          time.sleep(2)
-         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/CamaraCorrientes/forms/FORMS.zip")
+         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/EurosEnFitbank/forms/FORMS.zip")
          time.sleep(2)
          print ("Formulario Ingresado")
          button = driver.find_element_by_id("c_fboton_0")
          button.send_keys("webdrive" + Keys.ENTER)
-         time.sleep(5)
+         time.sleep(7)
          driver.close()
-    
+         
     def testSubirreportes(self):
-        driver = self.driver
-        driver.maximize_window()
-        driver.get("http://10.16.5.94:8380/WEB3/ingreso.html")
-        usuario = driver.find_element_by_id("usuario")
-        usuario.send_keys("ue01000663")
-        clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
-        clave.send_keys("hdkjhkjhkhkasda")
-        clave.send_keys("webdrive" + Keys.ENTER)
-        time.sleep(1.5)
-        trans = driver.find_element_by_id("entorno-pt")
-        trans.send_keys("01002")
-        trans.send_keys("webdrive" + Keys.ENTER)
-        time.sleep(3)
-        reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/CamaraCorrientes/reports/REPORTS.zip")
-        time.sleep(2)
-        print ('Reporte Ingresado')
-        button = driver.find_element_by_id("c_fboton_0")
-        button.send_keys("webdrive" + Keys.ENTER)
-        time.sleep(5)
-        driver.close()
+         driver = self.driver
+         driver.maximize_window()
+         driver.get("http://10.16.5.88:9380/WEB3/ingreso.html")
+         usuario = driver.find_element_by_id("usuario")
+         usuario.send_keys("ue01000663")
+         clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
+         clave.send_keys("hdkjhkjhkhkasda")
+         clave.send_keys("webdrive" + Keys.ENTER)
+         time.sleep(1.5)
+         trans = driver.find_element_by_id("entorno-pt")
+         trans.send_keys("01002")
+         trans.send_keys("webdrive" + Keys.ENTER)
+         time.sleep(3)
+         reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/EurosEnFitbank/reports/REPORTS.zip")
+         time.sleep(2)
+         print ('Reporte Ingresado')
+         button = driver.find_element_by_id("c_fboton_0")
+         button.send_keys("webdrive" + Keys.ENTER)
+         time.sleep(7)
+         driver.close()
     
         
 if __name__ == '__main__':

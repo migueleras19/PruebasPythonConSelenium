@@ -1,4 +1,5 @@
 sub,trans,plan,teje,refe
-04,6003,"/home/qacore/Escritorio/CamaraCorrientes/templates/046003-PAGO_CHEQUES_CAMARA.xls",GRUPOS,GRUPO
-04,6004,"/home/qacore/Escritorio/CamaraCorrientes/templates/046004-LOTE-CAMARA-ENTRANTE.xls",GRUPOS,GRUPO
-
+04,7512,"/home/qacore/Escritorio/TareaQa57879/templates/047512-PAGO_CONVENIOS_WEB.xls",GRUPOS,GRUPO
+04,6234,"/home/qacore/Escritorio/TareaQa57879/templates/046234-PAGO_EMPRESA_RECAUDADORA.xls",GRUPOS,GRUPO
+03,6059,"/home/qacore/Escritorio/TareaQa57879/templates/036059-PAGO_CONVENIOS_CAJA.xls",GRUPOS,GRUPO
+03,6132,"/home/qacore/Escritorio/TareaQa57879/templates/036132-PAGO_CONVENIOS_CAJA.xls",GRUPOS,GRUPO

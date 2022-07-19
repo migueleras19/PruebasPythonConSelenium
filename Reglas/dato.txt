@@ -1,0 +1,3 @@
+num,reg,cal
+335,"/media/qacore/data/respaldos/INSTALACIONES_FITBANK/CUENTAS_CORRIENTES/SUSPENCION/335.xls",A,
+406,"/media/qacore/data/respaldos/INSTALACIONES_FITBANK/CUENTAS_CORRIENTES/SUSPENCION/406.xls",A,
