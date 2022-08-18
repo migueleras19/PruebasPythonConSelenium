@@ -1,0 +1,6 @@
+04,6021,/home/qacore/Escritorio/SUSPENCION/templates/046021.xls,CONCEPTO,CONCEPTODETAIL
+03,6455,/home/qacore/Escritorio/SUSPENCION/templates/036455.xls,NORMAL,
+04,6186,/home/qacore/Escritorio/SUSPENCION/templates/046186.xls,NORMAL
+
+
+

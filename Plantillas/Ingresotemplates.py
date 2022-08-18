@@ -1,15 +1,17 @@
-import unittest, csv, time
-from selenium import webdriver
-from distutils.command.clean import clean
 from csv import reader
+import csv
+from distutils.command.clean import clean
+import unittest
+import time
+from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-class Testingreso122006(unittest. TestCase):
+class Ingreso122006(unittest. TestCase):
 
-    def setUp(self ):
-        self.driver = webdriver.Chrome(executable_path=r"/media/qacore/data/drivers/chromedriver")
+    def setUp(self):
+        self.driver = webdriver.Chrome(executable_path=r"./chromedriver")
     
     def test(self):
         driver = self.driver
@@ -22,71 +24,59 @@ class Testingreso122006(unittest. TestCase):
         usuario.send_keys("ue01000663")
         clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
         clave.send_keys("hdkjhkjhkhkasda" + Keys.ENTER)
-        time.sleep(1.5)
-
-        print('Bienvenido', self )
-        
-        #ingreso a la transacion a subir los templates...
+        time.sleep(3)
         transaccion = driver.find_element_by_id("entorno-pt")
         transaccion.send_keys("122006" + Keys.ENTER)
-        time.sleep(1.5)
+        time.sleep(3)
 
-        #Con el siguiente archivo es donde localiza las plantillas a subir... 
         with open('templates.csv') as File:
             reader = csv.DictReader(File, delimiter=',')
             for fila in reader:
-                print(fila)
                 
-               # Ingreso al subsitema y transacion...
-                #sub.clear()
-                time.sleep(1.5)
                 sub = driver.find_element_by_id('c_C1Csubsistema_0')
-                time.sleep(1.5)
+                #sub.clear()
+                time.sleep(2)
                 sub.send_keys(fila["sub"])
-                time.sleep(1.5)
-                sub.send_keys(Keys.TAB)  
+                sub.send_keys(Keys.TAB)
+                
                 trans = driver.find_element_by_id('c_C5Ctransaccion_0')
-                time.sleep(1.5)
+                trans.clear()
+                time.sleep(5)
                 trans.send_keys(fila["trans"])
-                time.sleep(1.5)
+                time.sleep(3)
                 trans.send_keys(Keys.ENTER)
-                time.sleep(1.5)
-
-                #Carga de la plantilla...
-                print('Espere mientras se carga el plantilla...')
+                time.sleep(5)
 
                 plan = driver.find_element_by_name("plantilla_0")
-                time.sleep(2)
+                #plan.clear()
+                time.sleep(3)
                 plan.send_keys(fila["plan"])
-                time.sleep(2)
-
+                time.sleep(3)
 
                 teje = driver.find_element_by_id("c_f5tipo_0")
-                
-                time.sleep(1.5)
+                #teje.clear()
+                time.sleep(3)
                 teje.send_keys(fila["teje"])
-                time.sleep(1.5)
+                time.sleep(3)
 
-                
                 refe =  driver.find_element_by_name("f6referencia")
                 refe.clear()
-                time.sleep(1.5)
+                time.sleep(3)
                 refe.send_keys(fila["refe"])
-                time.sleep(1.5)
-                print(sub)
-                
-                teclear = ActionChains(driver)
-                teclear.send_keys(Keys.F12).perform()
-                time.sleep(4)
+                time.sleep(3)
+                print('Insertando palntilla')
 
-                print({sub, trans, plan})
-                
-                teclear = ActionChains(driver)
-                teclear.send_keys(Keys.F2).perform()
-                time.sleep(2)
-                driver.find_element_by_xpath("/html/body/div[13]/div[2]/div/table/tr[2]/td[1]/button").click()
-                time.sleep(2)
-                driver.close()
+            teclear = ActionChains(driver)
+            teclear.send_keys(Keys.F12).perform()
+            time.sleep(5)
+
+        transaccion = driver.find_element_by_id("entorno-pt")
+        transaccion.clear()
+        transaccion.send_keys("122006")
+        time.sleep(5)
+        transaccion.send_keys(Keys.ENTER)
+        time.sleep(5)
+        driver.close()
 
 if __name__ == '__main__':
      unittest.main()

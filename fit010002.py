@@ -13,7 +13,7 @@ class Testingreso01002(unittest. TestCase):
     def testSubirformularios(self):
          driver = self.driver
          driver.maximize_window()
-         driver.get("http://10.16.5.88:9380/WEB3/ingreso.html")
+         driver.get("http://10.16.5.84:8380/WEB3/ingreso.html")
          usuario = driver.find_element_by_id("usuario")
          usuario.send_keys("ue01000663")
          clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
@@ -24,7 +24,7 @@ class Testingreso01002(unittest. TestCase):
          trans.send_keys("01002")
          trans.send_keys("webdrive" + Keys.ENTER)
          time.sleep(2)
-         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/EurosEnFitbank/forms/FORMS.zip")
+         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/OtrosIngresosCheques/forms/FORMS.zip")
          time.sleep(2)
          print ("Formulario Ingresado")
          button = driver.find_element_by_id("c_fboton_0")
@@ -35,7 +35,7 @@ class Testingreso01002(unittest. TestCase):
     def testSubirreportes(self):
          driver = self.driver
          driver.maximize_window()
-         driver.get("http://10.16.5.88:9380/WEB3/ingreso.html")
+         driver.get("http://10.16.5.84:8380/WEB3/ingreso.html")
          usuario = driver.find_element_by_id("usuario")
          usuario.send_keys("ue01000663")
          clave = driver.find_element_by_xpath("//*[@id='ingreso']/input[2]")
@@ -46,7 +46,7 @@ class Testingreso01002(unittest. TestCase):
          trans.send_keys("01002")
          trans.send_keys("webdrive" + Keys.ENTER)
          time.sleep(3)
-         reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/EurosEnFitbank/reports/REPORTS.zip")
+         reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/OtrosIngresosCheques/reports/REPORTS.zip")
          time.sleep(2)
          print ('Reporte Ingresado')
          button = driver.find_element_by_id("c_fboton_0")
