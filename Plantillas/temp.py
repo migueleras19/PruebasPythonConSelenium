@@ -25,7 +25,7 @@ class Testplan (unittest.TestCase):
         trans.send_keys("122006" + Keys.ENTER)
         time.sleep(1.5)
 
-        with open('plantilla.txt', 'r') as file:
+        with open("plantilla.txt", "r+") as file:
             for lineas in file:
                 usuario = (lineas)
                 sep = ','
@@ -37,24 +37,28 @@ class Testplan (unittest.TestCase):
                     pl = dividir[2]
                     te = dividir[3]
                     re = dividir[4]
+
                 except IndexError:
                     gotdata = 'null'
 
-                    
+    
                 print(sb, tr, pl, te, re)
 
-                driver.find_element_by_id('c_C1Csubsistema_0').send_keys(sb)
-                driver.find_element_by_id('c_C5Ctransaccion_0').send_keys(tr)
+                driver.find_element_by_id("c_C1Csubsistema_0").send_keys(sb)
+                time.sleep(2)
+                driver.find_element_by_id("c_C5Ctransaccion_0").send_keys(tr)
                 trans.send_keys(Keys.TAB)
-                time.sleep(1)
+                time.sleep(2)
                 driver.find_element_by_name("plantilla_0").send_keys(pl)
-                time.sleep(1)
+                time.sleep(2)
                 driver.find_element_by_id("c_f5tipo_0").send_keys(te)
-                time.sleep(1)
+                time.sleep(2)
+
                 driver.find_element_by_name("f6referencia").clear()
-                time.sleep(1)
+                time.sleep(2)
                 driver.find_element_by_name("f6referencia").send_keys(re)
                 time.sleep(2)
+                
                 act = ActionChains(driver)
                 act.send_keys(Keys.F12).perform()
                 time.sleep(4)
@@ -63,6 +67,7 @@ class Testplan (unittest.TestCase):
                 trans.clear()
                 trans.send_keys("122006" + Keys.ENTER)
                 time.sleep(2)
+                
                 
     
     def tearDown(self):

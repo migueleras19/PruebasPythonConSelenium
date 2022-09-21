@@ -24,7 +24,7 @@ class Testingreso01002(unittest. TestCase):
          trans.send_keys("01002")
          trans.send_keys("webdrive" + Keys.ENTER)
          time.sleep(2)
-         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/OtrosIngresosCheques/forms/FORMS.zip")
+         form = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/PagoPorMultas/forms/FORMS.zip")
          time.sleep(2)
          print ("Formulario Ingresado")
          button = driver.find_element_by_id("c_fboton_0")
@@ -46,14 +46,13 @@ class Testingreso01002(unittest. TestCase):
          trans.send_keys("01002")
          trans.send_keys("webdrive" + Keys.ENTER)
          time.sleep(3)
-         reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/OtrosIngresosCheques/reports/REPORTS.zip")
+         reports = driver.find_element_by_name("archivo_0").send_keys("/home/qacore/Escritorio/PagoPorMultas/reports/REPORTS.zip")
          time.sleep(2)
          print ('Reporte Ingresado')
          button = driver.find_element_by_id("c_fboton_0")
          button.send_keys("webdrive" + Keys.ENTER)
          time.sleep(7)
          driver.close()
-    
         
 if __name__ == '__main__':
      unittest.main()

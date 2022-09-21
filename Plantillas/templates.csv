@@ -1,5 +1,3 @@
-sub,trans,plan,teje,refe
-04,7512,"/home/qacore/Escritorio/TareaQa57879/templates/047512-PAGO_CONVENIOS_WEB.xls",GRUPOS,GRUPO
-04,6234,"/home/qacore/Escritorio/TareaQa57879/templates/046234-PAGO_EMPRESA_RECAUDADORA.xls",GRUPOS,GRUPO
-03,6059,"/home/qacore/Escritorio/TareaQa57879/templates/036059-PAGO_CONVENIOS_CAJA.xls",GRUPOS,GRUPO
-03,6132,"/home/qacore/Escritorio/TareaQa57879/templates/036132-PAGO_CONVENIOS_CAJA.xls",GRUPOS,GRUPO
+sub,trans,plan,teje
+04,6019,"/home/qacore/Escritorio/PAQUETE_UNO/templates/046019.xls", NORMAL
+04,6018,"/home/qacore/Escritorio/PAQUETE_UNO/templates/046018.xls", NORMAL
